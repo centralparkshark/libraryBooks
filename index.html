@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <h1 class="title">Library</h1>
+    <h3 class="heading">My Books:</h3>
+    <div class="shelf" id="shelf">
+
+    </div>
+    <button class="add" id="add" onclick="openForm()">Add Book</button>
+    <div id="gray"></div>
+    <div class="formPopUp" id="myForm">
+        <form action="" class="formContainer" id="form">
+            <h2>New Book</h2>
+
+            <label for="bookTitle">Title:</label>
+            <input 
+                type="text" 
+                name="bookTitle" 
+                id="bookTitle"
+                required>
+
+            <label for="author">Author:</label>
+            <input 
+                type="text" 
+                name="author" 
+                id="author"
+                required>
+
+            <label for="pages">Number of Pages:</label>
+            <input 
+                type="number" 
+                name="pages" 
+                id="pages"
+                required>
+
+            <div class="status buttons">
+                <label for="read">Read</label>
+                <input 
+                    type="radio" 
+                    name="status" 
+                    id="read" 
+                    value="read"
+                    required>     
+            
+                <label for="unread">Not Read</label>
+                <input 
+                    type="radio" 
+                    name="status" 
+                    id="unread" 
+                    value="unread">    
+            </div> 
+            <div class="buttons">
+                <button type="submit" class="btn">Add Book</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </div>
+        </form>
+    </div>
+    <script src="book.js"></script>
+</body>
+</html>

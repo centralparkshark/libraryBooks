@@ -1,0 +1,142 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+}
+
+.shelf {
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(2%, 1fr)) / repeat(auto-fit, minmax(250px, 1fr));
+    /*rows/columns*/ 
+    gap: 2vh;
+}
+
+.bookCard {
+    background-color: aliceblue;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.top {
+    background-color: lightgray;
+    border-radius: 6px 6px 0 0;
+    padding: 1vh;
+}
+
+.bookTitle {
+    font-weight: bold;
+}
+
+.author {
+    font-size: .9rem;
+    color: rgb(101, 101, 101);
+}
+
+.bottom {
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: calc(100% - 20px) auto;
+    line-height: 1rem;
+    
+}
+
+.left {
+    display: flex;
+    gap: 6px;
+    line-height: 1rem;
+}
+
+.bottom svg {
+    height: 1.4rem;
+    fill: darkslategray;
+}
+
+.status {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    vertical-align: middle;
+}
+
+.add {
+    height: 3rem;
+    width: 20vw;
+    position: fixed;
+    right: calc(50% - 10vw);
+    bottom: 6vh;
+    border: none;
+    border-radius: 3vh;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    background-color: darkslategray;
+    color: whitesmoke;
+    z-index: 9998;
+}
+
+.formPopUp {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 50;
+}
+
+.formContainer {
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 10px 60px;
+    width: min(70vw, 500px);
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer button {
+    align-self: center;
+    width: 40%;
+    font-size: 20px;
+    border: none;
+    background-color: darkslategray;
+    color: whitesmoke;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 3vh;
+    height: 2.4rem;
+}
+
+#gray {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 1vw;
+}
+
+input, label, .buttons {
+    margin-bottom: 1vh;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input {
+    height: 1.4rem;
+    border: solid 2px lightslategray;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: middle;
+}
